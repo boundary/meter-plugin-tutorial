@@ -27,7 +27,7 @@ while True:
     value = random.randrange(0, 99)
 
     # Format measurement string and write to standard out
-    print("{0}, {1}, {2}, {3}".format(metric, source, value, timestamp))
+    print("{0} {1} {2} {3}".format(metric, source, value, timestamp))
 
     # Wait for the next interval
     time.sleep(float(interval))
