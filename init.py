@@ -30,4 +30,4 @@ while True:
     print("{0}, {1}, {2}, {3}".format(metric, source, value, timestamp))
 
     # Wait for the next interval
-    time.sleep(interval)
+    time.sleep(float(interval))
