@@ -6,6 +6,8 @@ import json
 import random
 # Generate current timestamp values
 import time
+# Import to flush standard out
+import sys
 
 # Open the param.json file and parse JSON.
 with open("param.json") as f:
@@ -27,7 +29,8 @@ while True:
     value = random.randrange(0, 99)
 
     # Format measurement string and write to standard out
-    print("{0} {1} {2} {3}".format(metric, source, value, timestamp))
+    sys.stdout.write('{0} {1} {2} {3}\n'.format(metric,value,source,timestamp).decode('utf-8'))
+    sys.stdout.flush()
 
     # Wait for the next interval
     time.sleep(float(interval))
